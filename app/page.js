@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navbar from "./components/Navbar";
 
 export default function Home() {
@@ -21,13 +22,13 @@ export default function Home() {
           </div>
 
           <div className="mt-16 md:mt-0 md:absolute md:bottom-32 md:right-32">
-            <div
-              className="w-32 h-32 md:w-60 md:h-60 bg-white text-black rounded-full 
-        flex items-center justify-center text-lg md:text-2xl uppercase tracking-widest
-        hover:scale-105 transition-transform duration-300 cursor-pointer font-bellefair"
-            >
-              Explore
-            </div>
+            <Link href="/destination">
+              <div className="w-32 h-32 md:w-60 md:h-60 bg-white text-black rounded-full 
+              flex items-center justify-center text-lg md:text-2xl uppercase tracking-widest
+              hover:scale-105 transition-transform duration-300 cursor-pointer font-bellefair">
+                Explore
+              </div>
+            </Link>
           </div>
         </div>
       </main>
