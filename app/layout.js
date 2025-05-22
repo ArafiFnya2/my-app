@@ -1,14 +1,24 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bellefair, Barlow, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+
+const barlow = Barlow({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-barlow',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const belleFair = Bellefair({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-bellefair',
+});
+
+const barlowCondensed = Barlow_Condensed({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-barlow-condensed',
 });
 
 export const metadata = {
@@ -20,8 +30,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${barlow.variable} ${belleFair.variable} ${barlowCondensed.variable}  antialiased`}
       >
+        <Navbar className="barlow" />
         {children}
       </body>
     </html>
